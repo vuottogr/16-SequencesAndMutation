@@ -327,7 +327,7 @@ def is_palindrome(s):
       :type s: str
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # done: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     ####################################################################
@@ -337,13 +337,13 @@ def is_palindrome(s):
     ####################################################################
     # ------------------------------------------------------------------
 
-    first = s
-    for k in range(len(s)):
-        s[k] = first[len(first) - k]
-    if s == first:
-        print('it IS a palindrome')
+    new = ''
+    for k in range(len(s) - 1, -1, -1):
+        new = new + s[k]
+    if new == s:
+        return True
     else:
-        print('it IS NOT a palindrome')
+        return False
 
 
 
